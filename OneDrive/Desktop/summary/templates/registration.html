@@ -1,0 +1,324 @@
+
+{%include 'home_header.html'%} 
+
+  
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Home - QUICK SUMM</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/favicon.png" rel="icon">
+  <link href="static/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+ <link href="static/assets/css/main.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Append
+  * Updated: Feb 01 2024 with Bootstrap v5.3.2
+  * Template URL: https://bootstrapmade.com/append-bootstrap-website-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+  <style>
+    input,textarea,td,tr
+{
+  margin-left:15px;
+  margin-bottom:20px;
+  margin-top:15px;
+}
+input[type=text],input[type=number],input[type=password],textarea{
+  background:none;
+  border:groove;
+  border-radius:1em;
+  border-color:black;
+  width:259px;
+  height:2em;
+  color:blue;
+  font-size:16px;
+  text-align:center;
+  vertical-align:center;
+}
+html, body{
+  height: 100%; 
+}
+body { 
+			background-image: url() ;
+			background-position: center center;  
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
+			background-color: #999;
+  
+}
+
+div, body{
+  margin: 0;
+  padding: 0;
+  font-family: exo, sans-serif;
+  
+}
+.wrapper {
+  height: 100%; 
+  width: 100%; 
+}
+button:hover,button:focus { 
+  transition: 0.30s;
+    border-color:black;
+    color: black;
+  background:linear-gradient(90deg,purple,orange,purple);
+ 
+}
+
+button 
+{
+  background: none;
+  color:blue;
+  border: 3px groove;
+  border-color:purple;
+  background:linear-gradient(50deg,orange,orange,orange);
+  border-radius:2em;
+  font: inherit;
+  line-height: 0.9;
+  margin: 17px;
+  
+  padding: 15px 32px;
+}
+
+body {
+  
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+input[name='brand'] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: grab;
+}
+input[name='brand']:after 
+{
+  display: inline-block;
+  text-align: center;
+  font-size: 17px;
+  content: attr(data);
+  padding: 20px 20px;
+  border-radius: 20px;
+  width:83.9px;
+  color: rgba(0, 0, 2, 20);
+  transition: box-shadow 0.8s, color 1s;
+}
+input[name='brand']:focus{
+  cursor: grabbing;
+}
+
+input[name='brand']:checked:after {
+  box-shadow: 25px 18px 15px rgba(0.9, 0, 0, 0.4);
+  color: rgba(255, 255, 255, 0.7);
+}
+
+
+
+  </style>
+</head>
+
+<body class="index-page" data-bs-spy="scroll" data-bs-target="#navmenu">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="header fixed-top d-flex align-items-center">
+    <div class="container-fluid d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center me-auto me-xl-0">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="static/assets/img/logo.png" alt=""> -->
+        <h1>QUICK SUMM</h1>
+        <span>.</span>
+      </a>
+
+      <!-- Nav Menu -->
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="/" class="active">Home</a></li>
+          <li><a href="/login">Login</a></li>
+          <li><a href="/register">Register</a></li>
+
+          <!-- <li><a href="index.html#services">Services</a></li> -->
+          <!-- <li><a href="index.html#portfolio">Portfolio</a></li> -->
+          <!-- <li><a href="index.html#team">Team</a></li> -->
+          <!-- <li><a href="blog.html">Blog</a></li> -->
+          <!-- <li class="dropdown has-dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+            <ul class="dd-box-shadow">
+              <li><a href="#">Dropdown 1</a></li>
+              <li class="dropdown has-dropdown"><a href="#"><span>Deep Dropdown</span> <i class="bi bi-chevron-down"></i></a>
+                <ul class="dd-box-shadow">
+                  <li><a href="#">Deep Dropdown 1</a></li>
+                  <li><a href="#">Deep Dropdown 2</a></li>
+                  <li><a href="#">Deep Dropdown 3</a></li>
+                  <li><a href="#">Deep Dropdown 4</a></li>
+                  <li><a href="#">Deep Dropdown 5</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Dropdown 2</a></li>
+              <li><a href="#">Dropdown 3</a></li>
+              <li><a href="#">Dropdown 4</a></li>
+            </ul>
+          </li> -->
+          <!-- <li><a href="index.html#contact">Contact</a></li> -->
+        </ul>
+
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav><!-- End Nav Menu -->
+
+      <a class="btn-getstarted" href="#">DONE</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+  
+    <!-- Hero Section - Home Page -->
+    <section id="hero" class="hero">
+
+      <!-- <img src="static/assets/img/hero-bg.jpg" alt="" data-aos="fade-in"> -->
+
+      <div class="container">
+        <div class="row">
+          
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </section><!-- End Hero Section -->
+<center>
+  <html>
+    <head>
+    <title>Registration</title>
+    <h1 align="center" style="color:Blcak;font-size: xx-large;font-family:cursive;">Registeration Page</h1>
+    </head>
+    <body  style="color:indigo; font-family: cursive; background-color:rgb(183, 144, 144); font-size:large ;">
+      <!-- <link href='https://fonts.googleapis.com/css? rel='stylesheet' type='text/css'> -->
+    
+    <?php
+    //validations in php started from here  
+    $email = test_input($_POST["email"]);
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      $emailErr = "Invalid email format"; 
+    }
+    $name=$username=$city=$gender=$password=$picode=$address="";
+    ?>
+    <form action="" method="post" >
+    <table align="center" style="margin-top: 0pt;">
+    
+      <tr>
+        <td><strong>First Name <strong></td>
+        <td><input type="text" name="fname"></td>
+      </tr>
+      <tr>
+        <td><strong>Last Name <strong></td>
+        <td><input type="text" name="lname"></td>
+      </tr>
+      <tr>
+        <td><strong> Address<strong></td>
+        <td><textarea name="address" id="" cols="30" rows="10"></textarea></td>
+      </tr>
+      <tr>
+        <td> <strong>Phone</td>
+        <td><input type="text" name="phone"></td>
+      </tr>
+      <tr>
+        <td> <strong>Place</td>
+        <td><input type="text" name="place"></td>
+      </tr>
+      <tr>
+      <td> <strong>Username</td>
+      <td><input type="text" name="username"></td>
+    </tr>
+      <tr>
+        <td> <strong>Password</td>
+        <td><input type="password" name="password"></td>
+      </tr>
+      
+                                                                                    </tr>
+      <tr align="center">
+        <td colspan="2">
+           <input type="submit" name="register">
+           <input type=submit value="CLEAR" name="clear">              
+        </td>
+      </tr>	
+    
+      </table>	
+    </form>
+    </body>
+    </html>
+
+
+
+<!-- <form action="" method="post">
+    <table>
+        <tr>
+            <th>First Name</th>
+            <td><input type="text" name="fname"></td>
+        </tr>
+        <tr>
+            <th>Last Name</th>
+            <td><input type="text" name="lname"></td>
+        </tr>
+        <tr>
+            <th>Adress</th>
+            <td><textarea name="address" id="" cols="30" rows="10"></textarea></td>
+        </tr>
+        <tr>
+            <th>Phone number</th>
+            <td><input type="number" name="phone" id=""></td>
+        </tr>
+        <tr>
+            <th>Place</th>
+            <td><input type="text" name="place" id=""></td>
+        </tr>
+        <tr>
+            <th>username</th>
+            <td><input type="text" name="username" id=""></td>
+        </tr>
+        <tr>
+            <th>password</th>
+            <td><input type="password" name="password" id=""></td>
+        </tr>
+        <tr>
+            <td  align="center" colspan="3"><input type="submit" value="REGISTER" name="register" id=""></td></tr>
+            <td  align="center" colspan="3"><input type="submit" value="CLEAR" name="clear" id=""></td></tr>
+    </table>
+</form> -->
+
+</center>
+
+    {%include 'footer.html'%}
+
+
+
+

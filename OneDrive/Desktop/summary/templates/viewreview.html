@@ -1,0 +1,28 @@
+{%include 'adminhome_header.html'%}
+
+<br><br><br><br>
+
+    <center>
+      <h1>REVIEW</h1>
+      <table border="1" class="table table-striped" >
+        <tr style="background-color:black ;">
+    <tr>
+        <th>Slno</th>
+        <th>Name</th>
+        <th>Review_rating</th>
+        <th>Date</th>
+        
+    </tr>
+    {%for i in data['u']%}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{i['fname']}}{{i['lname']}}</td>
+        <td>{{i['review_rating']}}</td>
+        <td>{{i['date']}}</td>
+        
+        
+    </tr>
+    {%endfor%}
+</table>
+</center>
+{%include 'footer.html'%}

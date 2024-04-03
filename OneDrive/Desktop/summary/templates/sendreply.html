@@ -1,0 +1,28 @@
+
+{%include 'adminhome_header.html'%}
+
+  
+<br><br><br><br><br>
+
+<form action="" method="post">
+    <center>
+        <h1>Reply</h1>
+        <table border="1" class="table table-striped">
+            <tr style="background-color:black ;">
+        <tr>
+            <th>Complaint</th>
+            {%if data['view']%}
+            <td><input type="text" value="{{data['view'][0]['description']}}" readonly></td>
+            {%endif%}
+        </tr>
+        <tr>
+            <th>Reply</th>
+            <td><input type="text" name="reply"></td>
+        </tr><br><br>
+
+        <tr>
+            <td  align="center" colspan="2"><input style="margin-left: -250px ;" type="submit" value="SEND" name="send" id=""></td></tr>
+    </table>
+</center>
+</form>
+{%include 'footer.html'%}

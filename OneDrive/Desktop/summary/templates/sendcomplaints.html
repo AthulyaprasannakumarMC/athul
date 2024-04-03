@@ -1,0 +1,58 @@
+
+{%include 'userheader.html'%}
+
+  <br><br><br><br><br><br>
+
+         
+<form action=""method="post">
+    <center>
+      <H1>COMPLAINTS</H1>
+      <table border="1" class="table table-striped">
+        <tr style="background-color:black ;">
+
+    <tr>
+        
+        <th>Title</th>
+        <td><input type="text" name="title"></td></tr>
+        <tr>
+        <th>Description</th>
+        <td><textarea name="description" id="" cols="30" rows="10"></textarea></td>
+    </tr>
+    <tr>
+        <td  align="center" colspan="2"><input style="margin-left: -300px;" type="submit" value="SEND" name="complaints" id=""></td>
+    
+        
+    </tr>
+
+
+    
+</table>
+
+</form>
+
+
+<br>
+<h1>Reply</h1>
+<table border="1" class="table table-striped">
+    <tr style="background-color:black ;">
+    <tr>
+        <th>Slno</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Reply</th>
+        <th>Date</th>
+        
+    </tr>
+    {%for i in data['u']%}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{i['title']}}</td>
+        <td>{{i['description']}}</td>
+        <td>{{i['reply']}}</td>
+        <td>{{i['date']}}</td>
+        
+    </tr>
+    {%endfor%}
+</table>
+</center>
+{%include 'footer.html'%}

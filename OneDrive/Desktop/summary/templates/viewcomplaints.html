@@ -1,0 +1,32 @@
+{%include 'adminhome_header.html'%}
+<br><br><br><br><br>
+  
+    <center>
+      <H1>COMPLAINTS</H1>
+      <table border="1" class="table table-striped">
+        <tr style="background-color:black ;">
+    <tr>
+        <th>Slno</th>
+        <th>Name</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Reply</th>
+        <th>Date</th>
+        
+    </tr>
+    {%for i in data['u']%}
+    <tr>
+        <td>{{loop.index}}</td>
+        <td>{{i['fname']}}{{i['lname']}}</td>
+
+        <td>{{i['title']}}</td>
+        <td>{{i['description']}}</td>
+        <td>{{i['reply']}}</td>
+        <td>{{i['date']}}</td>
+        <td><a href="/sendreply?id={{i['complaints_id']}}">reply</a></td>
+        
+    </tr>
+    {%endfor%}
+</table>
+</center>
+{%include 'footer.html'%}
