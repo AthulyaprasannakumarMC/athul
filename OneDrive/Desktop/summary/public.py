@@ -1,58 +1,59 @@
-from flask import*
-from database import*
-
+from flask import *
+from database import *
 
 public=Blueprint('public',__name__)
 
-
 @public.route('/')
 def home():
-    return render_template("home.html")
+    
+    return render_template('home.html')
 
 
-@public.route('/login',methods=['get','post'])
+@public.route('/login',methods=['GET','POST'])
 def login():
-    if'login' in request.form:
-        uname=request.form['uname']
-        passw=request.form['password']
-        qry="select * from login where username='%s' and password='%s'"%(uname,passw)
-        res=select(qry)
+
+    if 'login' in request.form:
+        username=request.form['uname']
+        password=request.form['pass']
+        q="SELECT * FROM login WHERE `username`='%s' AND `password`='%s' "%(username,password)
+        res=select(q)
+       
         if res:
             session['lid']=res[0]['login_id']
-            if res:
-                utype=res[0]['usertype']
-                
-                if utype=='admin':
-                    return redirect(url_for('admin.adminhome'))
-                elif utype=='user':
-                    a="select * from user where login_id='%s'"%(session['lid'])
-                    q=select(a)
-                    session['uid']=q[0]['user_id']
-                    return redirect(url_for('user.userhome'))
             
-                
-    return render_template("login.html")
+            if res[0]['usertype']=="admin":
+                return redirect(url_for('admin.admin_home'))
+            
+            elif res[0]['usertype']=="user":
+                q="SELECT * from user WHERE login_id='%s'"%(session['lid'])
+                res1=select(q)
+                if res1:
+            
+                    session['uid']=res1[0]['user_id']
+                return redirect(url_for('user.user_home'))
+            
+    return render_template('login.html')
 
-@public.route('/register',methods=['get','post'])
-def register():
-    if'register'in request.form:
-        fname=request.form['fname']
-        lname=request.form['lname']
-        address=request.form['address']
-        phone=request.form['phone']
-        place=request.form['place']
-        username=request.form['username']
-        password=request.form['password']
-        
-        a="insert into login values(null,'%s','%s','user')"%(username,password)
-        res=insert(a)
-        
-        qry1="insert into user values(null,'%s','%s','%s','%s','%s','%s')"%(res,fname,lname,address,phone,place)
-        insert(qry1)
-        
-        
-        
+
+@public.route('/usereg',methods=['get','post'])
+def reg():
     
-    return render_template("registration.html")
+    if 'Register' in request.form:
+            
+            fname=request.form['fname']
+            lname=request.form['lname']
+            place=request.form['pla']
+            pho=request.form['pho']
+            ema=request.form['mail']
+            uname=request.form['uname']
+            pasw=request.form['pasw']
 
+            q="INSERT INTO login VALUES(NULL,'%s','%s','user')"%(uname,pasw)
+            res=insert(q)
 
+            q="INSERT INTO `user` VALUES(NULL,'%s','%s','%s','%s','%s','%s')"%(res,fname,lname,place,pho,ema)
+            insert(q)  
+
+            return redirect(url_for('public.login'))
+
+    return render_template('usereg.html')
